@@ -11,7 +11,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Register Page - Vuexy - Bootstrap HTML admin template</title>
+    <title>Register Page - kCRM</title>
     <link rel="apple-touch-icon" href="../../../frontend/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../frontend/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -73,7 +73,7 @@
                                                 @csrf
                                                 <div class="form-label-group">
                                                     <input type="text" id="name" placeholder="Name" class="form-control" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  required>
-                                                    <label for="inputName">Name</label>
+                                                    <label for="inputName">{{ __('Name') }}</label>
                                                     @error('name')
                                                     <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -82,7 +82,7 @@
                                                 </div>
                                                 <div class="form-label-group">
                                                     <input type="email" id="email"  placeholder="Email" class="form-control" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                                                    <label for="inputEmail">Email</label>
+                                                    <label for="inputEmail">{{ __('E-mail') }}</label>
                                                     @error('email')
                                                     <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -91,7 +91,7 @@
                                                 </div>
                                                 <div class="form-label-group">
                                                     <input type="password" id="type" placeholder="Password" class="form-control" @error('password') is-invalid @enderror" name="password"  required autocomplete="new-password">
-                                                    <label for="inputPassword">Password</label>
+                                                    <label for="inputPassword">{{ __('Password') }}</label>
                                                 </div>
                                                 @error('password')
                                                 <span class="invalid-feedback" role="alert">
@@ -100,7 +100,7 @@
                                                 @enderror
                                                 <div class="form-label-group">
                                                     <input type="password" id="password-confirm" name="password_confirmation" class="form-control" placeholder="Confirm Password" required autocomplete="new-password">
-                                                    <label for="inputConfPassword">Confirm Password</label>
+                                                    <label for="inputConfPassword">{{ __('Confirm Password') }} </label>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-12">
@@ -117,8 +117,8 @@
                                                         </fieldset>
                                                     </div>
                                                 </div>
-                                                <a href="{{ route('login') }}" class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
-                                                <button type="submit" class="btn btn-primary float-right btn-inline mb-50">Register</a>
+                                                <a href="{{ route('login') }}" class="btn btn-outline-primary float-left btn-inline mb-50">{{ __('Login') }}</a>
+                                                <button type="submit" class="btn btn-primary float-right btn-inline mb-50">{{ __('Register') }}</a>
                                             </form>
                                         </div>
                                     </div>

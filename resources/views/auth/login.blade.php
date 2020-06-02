@@ -9,7 +9,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Login Page - Vuexy - Bootstrap HTML admin template</title>
+    <title>Login Page - kCRM</title>
     <link rel="apple-touch-icon" href="../../../frontend/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../frontend/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -61,7 +61,7 @@
                                 <div class="card rounded-0 mb-0 px-2">
                                     <div class="card-header pb-1">
                                         <div class="card-title">
-                                            <h4 class="mb-0">Login</h4>
+                                            <h4 class="mb-0">{{ __('Login') }}</h4>
                                         </div>
                                     </div>
                                     <p class="px-2">Welcome back, please login to your account.</p>
@@ -74,7 +74,7 @@
                                                     <div class="form-control-position">
                                                         <i class="feather icon-user"></i>
                                                     </div>
-                                                    <label for="user-name">E-mail</label>
+                                                    <label for="user-name">{{ __('E-mail') }}</label>
                                                     @if ($errors->has('email'))
                                                         <span class="invalid-feedback">
                                                   <strong>{{ $errors->first('email') }}</strong>
@@ -87,7 +87,7 @@
                                                     <div class="form-control-position">
                                                         <i class="feather icon-lock"></i>
                                                     </div>
-                                                    <label for="user-password">Password</label>
+                                                    <label for="user-password">{{ __('Password') }}</label>
                                                     @if ($errors->has('password'))
                                                         <span class="invalid-feedback">
                                                  <strong>{{ $errors->first('password') }}</strong>
@@ -104,15 +104,15 @@
                                                                             <i class="vs-icon feather icon-check"></i>
                                                                         </span>
                                                                     </span>
-                                                                <span class="">Remember me</span>
+                                                                <span class="">{{ __('Remember Me') }}</span>
                                                             </div>
                                                         </fieldset>
                                                     </div>
-                                                    <div class="text-right"><a href="{{ route('password.request') }}" class="card-link">Forgot Password?</a></div>
+                                                    <div class="text-right"><a href="{{ route('password.request') }}" class="card-link">{{ __('Forgot Password') }}</a></div>
 
 
                                                 </div>
-                                                <a href="{{ route('register') }}" class="btn btn-outline-primary float-left btn-inline">Register</a>
+                                                <a href="{{ route('register') }}" class="btn btn-outline-primary float-left btn-inline">{{ __('Register') }}</a>
                                                 <button type="submit" class="btn btn-primary float-right btn-inline"> {{ __('Login') }}</button>
                                             </form>
                                         </div>
