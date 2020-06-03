@@ -43,6 +43,20 @@ class StaffController extends Controller
         $user->twitter= $request->input('twitter');
         $user->facebook= $request->input('facebook');
         $user->instagram= $request->input('instagram');
+
+        if($request->hasFile('avatar')) {
+            $filenameWithExt = $request->file('avatar')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('avatar')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('avatar')->storeAs('/public/images/', $fileNameToStore);
+            $user->photo = $fileNameToStore;
+        }
+
         $user->save();
         return redirect('user_list');
 
@@ -95,6 +109,20 @@ class StaffController extends Controller
         $user->twitter= $request->input('twitter');
         $user->facebook= $request->input('facebook');
         $user->instagram= $request->input('instagram');
+
+        if($request->hasFile('avatar')) {
+            $filenameWithExt = $request->file('avatar')->getClientOriginalName();
+            // Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            // Get just ext
+            $extension = $request->file('avatar')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            // Upload Image
+            $path = $request->file('avatar')->storeAs('/public/images/', $fileNameToStore);
+            $user->photo = $fileNameToStore;
+        }
+
         $user->save();
 
         return redirect()->action('StaffController@index');

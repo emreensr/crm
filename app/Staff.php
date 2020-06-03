@@ -12,6 +12,7 @@ class Staff extends Model
 
     protected $fillable = [
        'username', 'name', 'email', 'status', 'role', 'company', 'age', 'mobile',
-        'position', 'office', 'startdate', 'website', 'gender', 'address', 'city', 'state', 'country', 'twitter','facebook','instagram'
+        'position', 'office', 'startdate', 'website', 'gender', 'address', 'city', 'state', 'country', 'twitter','facebook','instagram',
+        'photo'
     ];
 }

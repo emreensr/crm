@@ -62,21 +62,15 @@
                                     <!-- users edit media object start -->
                                     <div class="media mb-2">
                                         <a class="mr-2 my-25" href="#">
-                                            <img src="../../../frontend/images/portrait/small/avatar-s-18.jpg" alt="users avatar" class="users-avatar-shadow rounded" height="90" width="90">
+                                            <img src="{{ asset('/storage/images/' . $users->photo) }}" alt="users avatar" class="users-avatar-shadow rounded" height="90" width="90">
                                         </a>
                                         <div class="media-body mt-50">
-                                            <h4 class="media-heading">Angelo Sashington</h4>
-                                            <div class="col-12 d-flex mt-1 px-0">
-                                                <a href="#" class="btn btn-primary d-none d-sm-block mr-75">Change</a>
-                                                <a href="#" class="btn btn-primary d-block d-sm-none mr-75"><i class="feather icon-edit-1"></i></a>
-                                                <a href="#" class="btn btn-outline-danger d-none d-sm-block">Remove</a>
-                                                <a href="#" class="btn btn-outline-danger d-block d-sm-none"><i class="feather icon-trash-2"></i></a>
-                                            </div>
+                                            <h4 class="media-heading">{{ $users->name }}</h4>
                                         </div>
                                     </div>
                                     <!-- users edit media object ends -->
                                     <!-- users edit account form start -->
-                                    <form  action="{{route('user_editpost',$users->id)}}" method="post">
+                                    <form  action="{{route('user_editpost',$users->id)}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-12 col-sm-6">
@@ -242,6 +236,13 @@
                                                         <input type="text" name="instagram" class="form-control" value="{{ $users->instagram }}">
                                                     </div>
                                                 </fieldset>
+                                                <label>Upload a photo</label>
+                                                <div class="input-group mb-75">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
+                                                    </div>
+                                                    <input type="file" name="avatar" class="form-control"  value="{{$users->photo}}" aria-describedby="basic-addon5">
+                                                </div>
                                             </div>
                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                                 <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
