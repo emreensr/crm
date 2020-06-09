@@ -5,7 +5,7 @@
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
-<head>a
+<head>
     <link rel="apple-touch-icon" href="../../../frontend/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../frontend/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -95,18 +95,29 @@
                                                         <input type="text" class="form-control" name=birthdate" value="{{ $users->birthdate }}">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Age</label>
-                                                        <input type="text" class="form-control" name="age"  value="{{ $users->age }}">
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Mobile</label>
+                                                            <input type="text" class="form-control" name="mobile"  value="{{ $users->mobile }}">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Mobile</label>
-                                                        <input type="text" class="form-control" name="mobile"  value="{{ $users->mobile }}">
+                                                    <ul class="nav nav-tabs mb-3" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                                <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Company</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="form-group">
+                                                        <label>Company</label>
+                                                        <input type="text" class="form-control"  name="company" value="{{ $users->company }}">
                                                     </div>
-                                                </div>
+                                                    <div class="form-group">
+                                                        <div class="controls">
+                                                            <label>Office</label>
+                                                            <input type="text" class="form-control" name="office" value="{{ $users->office }}">
+                                                        </div>
+                                                    </div>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>Position</label>
@@ -125,12 +136,7 @@
                                                         <input type="text" class="form-control" name="startdate" value="{{ $users->startdate }}">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Office</label>
-                                                        <input type="text" class="form-control" name="office" value="{{ $users->office }}">
-                                                    </div>
-                                                </div>
+
                                                 <div class="form-group">
                                                     <label>Gender</label>
                                                     <ul class="list-unstyled mb-0">
@@ -160,6 +166,13 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                    <label>Upload a photo</label>
+                                                    <div class="input-group mb-75">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
+                                                        </div>
+                                                        <input type="file" name="avatar" class="form-control"  value="{{$users->photo}}" aria-describedby="basic-addon5">
+                                                    </div>
                                             </div>
                                             <div class="col-12 col-sm-6">
 
@@ -178,9 +191,18 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Company</label>
-                                                    <input type="text" class="form-control"  name="company" value="{{ $users->company }}">
-                                                </div>
+                                                    <div class="controls">
+                                                        <label>Age</label>
+                                                        <input type="text" class="form-control" name="age"  value="{{ $users->age }}">
+                                                    </div>
+                                                </div> 
+                                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Addresses</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>Address Line 1</label>
@@ -211,7 +233,13 @@
                                                         <input type="text" class="form-control"  name="country" value="{{ $users->country }}">
                                                     </div>
                                                 </div>
-
+                                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Social Links</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                                 <fieldset>
                                                     <label>Twitter</label>
                                                     <div class="input-group mb-75">
@@ -236,13 +264,7 @@
                                                         <input type="text" name="instagram" class="form-control" value="{{ $users->instagram }}">
                                                     </div>
                                                 </fieldset>
-                                                <label>Upload a photo</label>
-                                                <div class="input-group mb-75">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
-                                                    </div>
-                                                    <input type="file" name="avatar" class="form-control"  value="{{$users->photo}}" aria-describedby="basic-addon5">
-                                                </div>
+
                                             </div>
                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                                 <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save

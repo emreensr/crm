@@ -5,11 +5,7 @@
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
 
-<head>a
-    <link rel="apple-touch-icon" href="../../../frontend/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../frontend/images/ico/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
-
+<head>
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/plugins/forms/validation/form-validation.css">
@@ -92,20 +88,31 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Age</label>
-                                                        <input type="text" class="form-control" name="age"  placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
+                                                        <label>Mobile</label>
+                                                        <input type="text" class="form-control" name="mobile"  placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
                                                     </div>
+                                                </div>
+                                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Company</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="form-group">
+                                                    <label>Company</label>
+                                                    <input type="text" class="form-control"  name="company" placeholder="Company name">
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Mobile</label>
-                                                        <input type="text" class="form-control" name="mobile"  placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
+                                                        <label>Office</label>
+                                                        <input type="text" class="form-control" name="office" placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>Position</label>
-                                                        <input type="text" class="form-control" name="position"  placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
+                                                        <input type="text" class="form-control" name="position"  placeholder="Position here..." data-validation-required-message="This mobile number is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -118,12 +125,6 @@
                                                     <div class="controls">
                                                         <label>Start Date</label>
                                                         <input type="text" class="form-control" name="startdate" required placeholder="Website here..."  data-validation-required-message="This Website field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Office</label>
-                                                        <input type="text" class="form-control" name="office" placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -155,6 +156,13 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                <label>Upload a photo</label>
+                                                <div class="input-group mb-75">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
+                                                    </div>
+                                                    <input type="file" name="avatar" class="form-control"  placeholder="Upload a photo" aria-describedby="basic-addon5">
+                                                </div>
                                             </div>
                                             <div class="col-12 col-sm-6">
 
@@ -173,9 +181,19 @@
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Company</label>
-                                                    <input type="text" class="form-control"  name="company" placeholder="Company name">
+                                                    <div class="controls">
+                                                        <label>Age</label>
+                                                        <input type="text" class="form-control" name="age"  placeholder="Age here..." data-validation-required-message="This mobile number is required">
+                                                    </div>
                                                 </div>
+
+                                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Addresses</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>Address Line 1</label>
@@ -184,29 +202,35 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Postcode</label>
-                                                        <input type="text" class="form-control"  name="postcode" required placeholder="postcode"  data-validation-required-message="This Postcode field is required">
+                                                        <label>State</label>
+                                                        <input type="text" class="form-control" name="state" required placeholder="State"  data-validation-required-message="This Time Zone field is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>City</label>
-                                                        <input type="text" class="form-control" name="city" required data-validation-required-message="This Time Zone field is required">
+                                                        <input type="text" class="form-control" name="city" required placeholder="City" data-validation-required-message="This Time Zone field is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>State</label>
-                                                        <input type="text" class="form-control" name="state" required  data-validation-required-message="This Time Zone field is required">
+                                                        <label>Postcode</label>
+                                                        <input type="text" class="form-control"  name="postcode" required placeholder="Postcode"  data-validation-required-message="This Postcode field is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <label>Country</label>
-                                                        <input type="text" class="form-control"  name="country" required  data-validation-required-message="This Time Zone field is required">
+                                                        <input type="text" class="form-control"  name="country" required placeholder="Country" data-validation-required-message="This Time Zone field is required">
                                                     </div>
                                                 </div>
-
+                                                <ul class="nav nav-tabs mb-3" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
+                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Social Links</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                                 <fieldset>
                                                     <label>Twitter</label>
                                                     <div class="input-group mb-75">
@@ -230,13 +254,6 @@
                                                         </div>
                                                         <input type="text" name="instagram" class="form-control"  placeholder="https://www.instagram.com/" aria-describedby="basic-addon5">
                                                     </div>
-                                                    <label>Upload a photo</label>
-                                                    <div class="input-group mb-75">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
-                                                        </div>
-                                                        <input type="file" name="avatar" class="form-control"  placeholder="Upload a photo" aria-describedby="basic-addon5">
-                                                    </div>
                                                 </fieldset>
                                             <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                                 <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
@@ -253,7 +270,6 @@
                 </div>
             </section>
             <!-- users edit ends -->
-
         </div>
     </div>
 </div>
