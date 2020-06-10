@@ -9,9 +9,9 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>kCRM - </title>
-    <link rel="apple-touch-icon" href="../../..frontend/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../..frontend/images/ico/favicon.ico">
+    <title>CRM - </title>
+    <link rel="apple-touch-icon" href="../../..frontend/images/ico/kodmozlogo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../..frontend/images/ico/kodmozlogo.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -20,7 +20,14 @@
     <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/extensions/tether-theme-arrows.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/extensions/tether.min.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/extensions/shepherd-theme-default.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/calendars/fullcalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/calendars/extensions/daygrid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/calendars/extensions/timegrid.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/vendors/css/pickers/pickadate/pickadate.css">
     <!-- END: Ven
+
+
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/bootstrap-extended.css">
@@ -35,6 +42,9 @@
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/pages/dashboard-analytics.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/pages/card-analytics.css">
     <link rel="stylesheet" type="text/css" href="../../../frontend/css/plugins/tour/tour.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../../frontend/css/plugins/calendars/fullcalendar.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -200,7 +210,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                            <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../../frontend/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                            <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">{{Auth::user()->name}}</span><span class="user-status">Available</span></div><span><img class="round" src="../../../storage/images/pp_1591699183.jpeg" alt="avatar" height="40" width="40"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="feather icon-message-square"></i> Chats</a>
                             <div class="dropdown-divider"></div><a class="dropdown-item" href="{{ url('/logout') }}"><i class="feather icon-power"></i> Logout</a>
@@ -295,28 +305,164 @@
 <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
-            <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
-                    <div class="brand-logo"></div>
-                    <h2 class="brand-text mb-0">Vuexy</h2>
-                </a></li>
+            <li class="nav-item mr-auto"><a class="navbar-brand" href="{{action('FrontController@index')}}">
+                    <div><img src="/frontend/images/ico/kodmozlogo.png" style="height: 40px;"></div>
+                    <h4 style="color: #5ec100">CRM</h4>
             <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
         </ul>
     </div>
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-            <li class=" nav-item"><a href="{{action('FrontController@index')}}"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">2</span></a>
-            </li>
-            <li class=" navigation-header"><span>Apps</span>
-            <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">Staff</span></a>
+            <li class=" navigation-header"><span>Menüler</span>
+            <li class=" nav-item"><a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">Personel</span></a>
                 <ul class="menu-content">
-                    <li><a href="{{ route('user_add') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Add</span></a>
+                    <li><a href="{{ route('user_add') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">Ekle</span></a>
                     </li>
-                    <li><a href="{{ route('user_list') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">List</span></a>
+                    <li><a href="{{ route('user_list') }}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">Listele</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Form Elements">Eğitim</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çevrimiçi Eğitim</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkbox">Eğitim</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Select">Eğitim Planı</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Switch">Rapor</span></a>
                     </li>
 
                 </ul>
             </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-target"></i><span class="menu-title" data-i18n="Form Elements">Görev Sihirbazı</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma Bilgisi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje Gerçekleşme</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Rapor</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Form Elements">İnsan Kaynakları</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kimlik</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İş Başvuruları</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin Giriş</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Form Elements">Kalite</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Başvuruları</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Takibi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Döküman İnceleme</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Süreçler</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-chevrons-up"></i><span class="menu-title" data-i18n="Form Elements">Kişisel Veri ve IT</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">KVKK Sihirbazı</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Uyumluluk İzleme</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Gizlilik Sözleşmeleri</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Açık Rıza</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Testler</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihazlar</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihaz Zimmet</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-check-circle"></i><span class="menu-title" data-i18n="Form Elements">Öneri</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Önerilerim</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneriler</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneri Değerlendirme</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneri Değerlendirme Paneli</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ödül</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-bookmark"></i><span class="menu-title" data-i18n="Form Elements">Talep</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Taşıt</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Genel</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Form Elements">Toplantı</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Toplantı/Randevu</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Salon Onay</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkramlar</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkram Paneli</span></a>
+                    </li>
+                </ul>
+            </li>
+             <li class=" nav-item"><a href="#"><i class="feather icon-user-check"></i><span class="menu-title" data-i18n="Form Elements">Ziyaretçi</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi Bilgisi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi kodu</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yasaklı Ziyaretçi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">VIP Ziyaretçi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Acil Durum Mesajı</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çağrı Noktası Paneli</span></a>
+                    </li>
+                </ul>
+            </li>
+                <li class=" nav-item"><a href="#"><i class="feather icon-settings"></i><span class="menu-title" data-i18n="Form Elements">Ayarlar</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Başlangıç Ayarları</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yetkilendirme</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Sistem Parametreleri</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><i class="feather icon-at-sign"></i><span class="menu-title" data-i18n="Form Elements">Hesabım</span></a>
+                <ul class="menu-content">
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Lisans</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Destek Talebi</span></a>
+                    </li>
+                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Satın Al</span></a>
+                    </li>
+                </ul>
+            </li>
+
     </div>
 </div>
 <!-- END: Main Menu-->
@@ -344,6 +490,14 @@
 <script src="../../../frontend/vendors/js/extensions/shepherd.min.js"></script>
 <!-- END: Page Vendor JS-->
 
+<script src="../../../frontend/vendors/js/extensions/moment.min.js"></script>
+<script src="../../../frontend/vendors/js/calendar/fullcalendar.min.js"></script>
+<script src="../../../frontend/vendors/js/calendar/extensions/daygrid.min.js"></script>
+<script src="../../../frontend/vendors/js/calendar/extensions/timegrid.min.js"></script>
+<script src="../../../frontend/vendors/js/calendar/extensions/interactions.min.js"></script>
+<script src="../../../frontend/vendors/js/pickers/pickadate/picker.js"></script>
+<script src="../../../frontend/vendors/js/pickers/pickadate/picker.date.js"></script>
+
 <!-- BEGIN: Theme JS-->
 <script src="../../../frontend/js/core/app-menu.js"></script>
 <script src="../../../frontend/js/core/app.js"></script>
@@ -353,6 +507,8 @@
 <!-- BEGIN: Page JS-->
 <script src="../../../frontend/js/scripts/pages/dashboard-analytics.js"></script>
 <!-- END: Page JS-->
+<script src="../../../frontend/js/scripts/extensions/fullcalendar.js"></script>
+
 
 </body>
 <!-- END: Body-->

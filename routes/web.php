@@ -40,6 +40,7 @@ Route::get('user_view/{id}', 'StaffController@user_view')->name('user_view');
 Route::get('user_delete/{id}', 'StaffController@user_delete')->name('user_delete');
 
 
+Route::get('todo', 'TodoController@index')->name('todo');
 
 
 

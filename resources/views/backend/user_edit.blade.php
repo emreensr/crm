@@ -195,7 +195,7 @@
                                                         <label>Age</label>
                                                         <input type="text" class="form-control" name="age"  value="{{ $users->age }}">
                                                     </div>
-                                                </div> 
+                                                </div>
                                                 <ul class="nav nav-tabs mb-3" role="tablist">
                                                     <li class="nav-item">
                                                         <a class="nav-link d-flex align-items-center active"  aria-selected="true">
