@@ -327,22 +327,34 @@
                 <ul class="menu-content">
                     <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çevrimiçi Eğitim</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkbox">Eğitim</span></a>
+                    <li><a href="{{route('education')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Checkbox">Eğitim</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Select">Eğitim Planı</span></a>
+                    <li><a href="{{route('educationplan')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Select">Eğitim Planı</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Switch">Rapor</span></a>
+                    <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Rapor</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('educationinfo')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Eğitim Bilgileri</span></a>
+                            </li>
+                            <li><a href="{{route('personaledu')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Personel Bazında Eğitim</span></a>
+                            </li>
+                            <li><a href="{{route('yeareducation')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yıl Bazında Eğitim</span></a>
+                            </li>
+                        </ul>
                     </li>
 
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-target"></i><span class="menu-title" data-i18n="Form Elements">Görev Sihirbazı</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje</span></a>
+                    <li><a href="{{route('workinginfo')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma Bilgisi</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma Bilgisi</span></a>
+                    <li><a href="{{route('task')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Görev</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje Gerçekleşme</span></a>
+                    <li><a href="{{route('project')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje</span></a>
+                    </li>
+                    <li><a href="{{route('projectrealization')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Proje Gerçekleşme</span></a>
+                    </li>
+                    <li><a href="{{route('repetitivetask')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Tekrarlı Görev</span></a>
                     </li>
                     <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Rapor</span></a>
                     </li>
@@ -350,44 +362,63 @@
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Form Elements">İnsan Kaynakları</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kimlik</span></a>
+                    <li><a href="{{route('identity')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kimlik</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma</span></a>
+                    <li><a href="{{route('working')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çalışma</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İş Başvuruları</span></a>
+                    <li><a href="{{route('personal')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kişisel</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin Giriş</span></a>
+                    <li><a href="{{route('education')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Eğitim</span></a>
+                    </li>
+                    <li><a href="{{route('jobapplication')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İş Başvuruları</span></a>
+                    </li>
+                    <li><a href="{{route('permission')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin Giriş</span></a>
+                    </li>
+                    <li><a href="{{route('contunity')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Personel Devamlılık</span></a>
+                    </li>
+                    <li><a href="{{route('healthreport')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Sağlık Raporu Girişi</span></a>
+                    </li>
+                    <li><a href="{{route('shift')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Vardiya</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Form Elements">Kalite</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Başvuruları</span></a>
+                    <li><a href="{{route('docapplication')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Başvuruları</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Takibi</span></a>
+                    <li><a href="{{route('doctracking')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Belge Takibi</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Döküman İnceleme</span></a>
+                    <li><a href="{{route('handbook')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">El Kitabı</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Süreçler</span></a>
+                    <li><a href="{{route('policies')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Politikalar</span></a>
+                    </li>
+                    <li><a href="{{route('processes')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Süreçler</span></a>
+                    </li>
+                    <li><a href="{{route('procedure')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Prosedürler</span></a>
+                    </li>
+                    <li><a href="{{route('form')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Form</span></a>
+                    </li>
+                    <li><a href="{{route('instructions')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Talimatlar</span></a>
+                    </li>
+                    <li><a href="{{route('rootcauseanalysis')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kök Neden Analizi</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-chevrons-up"></i><span class="menu-title" data-i18n="Form Elements">Kişisel Veri ve IT</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">KVKK Sihirbazı</span></a>
+                    <li><a href="{{route('organization')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Organizasyon</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Uyumluluk İzleme</span></a>
+                    <li><a href="{{route('clarificationtexts')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Aydınlatma Metinleri</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Gizlilik Sözleşmeleri</span></a>
+                    <li><a href="{{route('privacyagreements')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Gizlilik Anlaşmaları</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Açık Rıza</span></a>
+                    <li><a href="{{route('expressconsent')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Açık Rıza</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Testler</span></a>
+                    <li><a href="{{route('expressconsentrecords')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Açık Rıza Kayıtları</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihazlar</span></a>
+                     <li><a href="{{route('datatransferrecords')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Veri Aktarım Kayıtları</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihaz Zimmet</span></a>
-                    </li>
+
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-check-circle"></i><span class="menu-title" data-i18n="Form Elements">Öneri</span></a>
