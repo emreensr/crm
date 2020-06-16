@@ -418,68 +418,122 @@
                     </li>
                      <li><a href="{{route('datatransferrecords')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Veri Aktarım Kayıtları</span></a>
                     </li>
+                    <li><a href="{{route('databreachnotification')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Veri İhlal Bildirimi</span></a>
+                    </li>
+                    <li><a href="{{route('tests')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Testler</span></a>
+                    </li>
+                    <li><a href="{{route('devices')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihazlar</span></a>
+                    </li>
+                    <li><a href="{{route('devicedebit')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Cihaz Zimmet</span></a>
+                    </li>
+                    <li><a href="{{route('softwarelicenses')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yazılım Lisansları</span></a>
+                    </li>
+                    <li><a href="{{route('passwords')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Şifreler</span></a>
+                    </li>
 
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-check-circle"></i><span class="menu-title" data-i18n="Form Elements">Öneri</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Önerilerim</span></a>
+                    <li><a href="{{route('myadvices')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Önerilerim</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneriler</span></a>
+                    <li><a href="{{route('advices')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneriler</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneri Değerlendirme</span></a>
+                    <li><a href="{{route('adviceevaluation')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneri Değerlendirme</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Öneri Değerlendirme Paneli</span></a>
-                    </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ödül</span></a>
+                    <li><a href="{{route('award')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ödül</span></a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-bookmark"></i><span class="menu-title" data-i18n="Form Elements">Talep</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin</span></a>
+                    <li><a href="{{route('leave')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Taşıt</span></a>
+                    <li><a href="{{route('vehicle')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Taşıt</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Genel</span></a>
+                    <li><a href="{{route('generaldemand')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Genel Talep</span></a>
+                    </li>
+                    <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Değerlendirme</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('permissionapproval')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İzin</span></a>
+                            </li>
+                            <li><a href="{{route('vehicleapproval')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Taşıt</span></a>
+                            </li>
+                            <li><a href="{{route('generaldemandapproval')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Genel</span></a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Form Elements">Toplantı</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Toplantı/Randevu</span></a>
+                    <li><a href="{{route('meeting')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Toplantı/Randevu</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Salon Onay</span></a>
+                    <li><a href="{{route('roomapproval')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Salon Onay</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkramlar</span></a>
+                    <li><a href="{{route('meetingttracing')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Toplantı/Randevu İzleme</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkram Paneli</span></a>
+                    <li><a href="{{route('discount')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkramlar</span></a>
+                    </li>
+                    <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Tanım</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('room')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Salon</span></a>
+                            </li>
+                            <li><a href="{{route('roompanel')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Salon Paneli</span></a>
+                            </li>
+                            <li><a href="{{route('discountplace')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkram Noktası</span></a>
+                            </li>
+                            <li><a href="{{route('discountplacepanel')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">İkram Noktası Paneli</span></a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
              <li class=" nav-item"><a href="#"><i class="feather icon-user-check"></i><span class="menu-title" data-i18n="Form Elements">Ziyaretçi</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi Bilgisi</span></a>
+                    <li><a href="{{route('visitinfo')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi Bilgisi</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi kodu</span></a>
+                    <li><a href="{{route('visitorscode')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi kodu</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yasaklı Ziyaretçi</span></a>
+                    <li><a href="{{route('bannedvisitor')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yasaklı Ziyaretçi</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">VIP Ziyaretçi</span></a>
+                    <li><a href="{{route('vipvisitor')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">VIP Ziyaretçi</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Acil Durum Mesajı</span></a>
+                    <li><a href="{{route('callpointmessages')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çağrı Noktası Mesajları</span></a>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Çağrı Noktası Paneli</span></a>
+                    <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Rapor</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('visitorspanel')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi Paneli</span></a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
                 <li class=" nav-item"><a href="#"><i class="feather icon-settings"></i><span class="menu-title" data-i18n="Form Elements">Ayarlar</span></a>
                 <ul class="menu-content">
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Başlangıç Ayarları</span></a>
+                    <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Başlangıç Ayarları</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('company')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Şirket Tanımla</span></a>
+                            </li>
+                            <li><a href="{{route('title')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Pozisyon Tanımla</span></a>
+                            </li>
+                            <li><a href="{{route('staff')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Personel Tanımla</span></a>
+                            </li>
+                        </ul>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yetkilendirme</span></a>
+                        <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Yetkilendirme</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('authoritygroup')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Yetki Grubu</span></a>
+                            </li>
+                            <li><a href="{{route('userauthorization')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Kullanıcı Yetkilendir</span></a>
+                            </li>
+                        </ul>
                     </li>
-                    <li><a href=""><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Sistem Parametreleri</span></a>
+                        <li class=" nav-item"><a href="#"><i class="feather icon-circle"></i><span class="menu-title" data-i18n="User">Sistem Parametreleri</span></a>
+                        <ul class="menu-content">
+                            <li><a href="{{route('visitorspanel')}}"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Radio">Ziyaretçi Paneli</span></a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>

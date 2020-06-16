@@ -24,5 +24,23 @@ class PersonalDataController extends Controller
      public function datatransferrecords(){
         return view('backend.personaldata.datatransferrecords');
     }
+     public function databreachnotification(){
+        return view('backend.personaldata.databreachnotification');
+    }
+    public function tests(){
+        return view('backend.personaldata.tests');
+    }
+    public function devices(){
+        return view('backend.personaldata.device');
+    }
+    public function devicedebit(){
+        return view('backend.personaldata.devicedebit');
+    }
+    public function softwarelicenses(){
+        return view('backend.personaldata.softwarelicenses');
+    }
+     public function passwords(){
+        return view('backend.personaldata.passwords');
+    }
 
 }

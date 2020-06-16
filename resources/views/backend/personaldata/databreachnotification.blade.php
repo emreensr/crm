@@ -19,7 +19,7 @@
                             <ul class="nav nav-tabs mb-3" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="#account" aria-controls="account" role="tab" aria-selected="true">
-                                        <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Organizasyon</span>
+                                        <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Veri İhlal Bildirimi</span>
                                     </a>
                                 </li>
                             </ul>
@@ -36,9 +36,16 @@
                                                         <table class="table nowrap scroll-horizontal-vertical">
                                                             <thead>
                                                             <tr>
-                                                                <th>Şirket Adı</th>
-                                                                <th>İrtibat Kişisi</th>
-                                                                <th>VERBIS Kayıt Tarihi</th>
+                                                                <th>Veri Sorumlusu</th>
+                                                                <th>Bildirimi Hazırlayan Personel</th>
+                                                                <th>Gerçekleşme Tarihi</th>
+                                                                <th>Tespit Tarihi</th>
+                                                                <th>Bildirim Türü</th>
+                                                                <th>İhlal Hakkında Bilgi</th>
+                                                                <th>İhlalden Etkilenen Kişi Sayısı</th>
+                                                                <th>İhlalden Etkilenen Kayıt Sayısı</th>
+                                                                <th>İhlal Kaynağı</th>
+                                                                <th>Durumu</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
@@ -46,10 +53,25 @@
                                                                 <td>
                                                                     <input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
                                                                 </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
                                                                 <td>
                                                                     <input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
                                                                 </td>
-                                                                <td><input type="date" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                <td>
+                                                                    <input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
+                                                                </td>
+                                                                <td><input type="text" class="form-control" name="office"  data-validation-required-message="This mobile number is required">
                                                                 </td>
                                                             </tbody>
                                                         </table>

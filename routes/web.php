@@ -87,9 +87,54 @@ Route::get('privacyagreements', 'PersonalDataController@privacyagreements')->nam
 Route::get('expressconsent', 'PersonalDataController@expressconsent')->name('expressconsent');
 Route::get('expressconsentrecords', 'PersonalDataController@expressconsentrecords')->name('expressconsentrecords');
 Route::get('datatransferrecords', 'PersonalDataController@datatransferrecords')->name('datatransferrecords');
+Route::get('databreachnotification', 'PersonalDataController@databreachnotification')->name('databreachnotification');
+Route::get('tests', 'PersonalDataController@tests')->name('tests');
+Route::get('devices', 'PersonalDataController@devices')->name('devices');
+Route::get('devicedebit', 'PersonalDataController@devicedebit')->name('devicedebit');
+Route::get('softwarelicenses', 'PersonalDataController@softwarelicenses')->name('softwarelicenses');
+Route::get('passwords', 'PersonalDataController@passwords')->name('passwords');
+
+//ADVİCES
+
+Route::get('myadvices', 'AdviceController@myadvices')->name('myadvices');
+Route::get('advices', 'AdviceController@advices')->name('advices');
+Route::get('adviceevaluation', 'AdviceController@adviceevaluation')->name('adviceevaluation');
+Route::get('award', 'AdviceController@award')->name('award');
+
+//ADVİCES
+
+Route::get('leave', 'DemandController@leave')->name('leave');
+Route::get('vehicle', 'DemandController@vehicle')->name('vehicle');
+Route::get('generaldemand', 'DemandController@generaldemand')->name('generaldemand');
+Route::get('permissionapproval', 'DemandController@permissionapproval')->name('permissionapproval');
+Route::get('vehicleapproval', 'DemandController@vehicleapproval')->name('vehicleapproval');
+Route::get('generaldemandapproval', 'DemandController@generaldemandapproval')->name('generaldemandapproval');
+
+//MEETİNG
+
+Route::get('meeting', 'MeetingController@meeting')->name('meeting');
+Route::get('roomapproval', 'MeetingController@roomapproval')->name('roomapproval');
+Route::get('meetingttracing', 'MeetingController@meetingttracing')->name('meetingttracing');
+Route::get('discount', 'MeetingController@discount')->name('discount');
+Route::get('room', 'MeetingController@room')->name('room');
+Route::get('roompanel', 'MeetingController@roompanel')->name('roompanel');
+Route::get('discountplace', 'MeetingController@discountplace')->name('discountplace');
+Route::get('discountplacepanel', 'MeetingController@discountplacepanel')->name('discountplacepanel');
+
+//VISITORS
+
+Route::get('visitinfo', 'VisitorController@visitinfo')->name('visitinfo');
+Route::get('visitorscode', 'VisitorController@visitorscode')->name('visitorscode');
+Route::get('bannedvisitor', 'VisitorController@bannedvisitor')->name('bannedvisitor');
+Route::get('vipvisitor', 'VisitorController@vipvisitor')->name('vipvisitor');
+Route::get('callpointmessages', 'VisitorController@callpointmessages')->name('callpointmessages');
+Route::get('visitorspanel', 'VisitorController@visitorspanel')->name('visitorspanel');
 
 
+//SETTINGS
 
-
-
-
+Route::get('company', 'SettingsController@company')->name('company');
+Route::get('title', 'SettingsController@title')->name('title');
+Route::get('staff', 'SettingsController@staff')->name('staff');
+Route::get('authoritygroup', 'SettingsController@authoritygroup')->name('authoritygroup');
+Route::get('userauthorization', 'SettingsController@userauthorization')->name('userauthorization');
