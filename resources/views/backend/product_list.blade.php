@@ -120,7 +120,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">User List</h4>
+                                    <h4 class="card-title">Product List</h4>
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body card-dashboard">
@@ -130,25 +130,25 @@
                                                 <thead>
                                                 <tr>
                                                     <th>Name</th>
-                                                    <th>Company</th>
-                                                    <th>E-Mail</th>
-                                                    <th>Country</th>
-                                                    <th>Type</th>
-                                                    <th>Creation date</th>
+                                                    <th>Version</th>
+                                                    <th>Release Date</th>
+                                                    <th>Setup File</th>
+                                                    <th>User Manual</th>
+                                                    <th>Release Notes</th>
                                                     <th>Actions</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($user as $key)
+                                                @foreach($product as $key)
                                                 <tr>
                                                     <td>{{$key->name}}</td>
-                                                    <td>{{$key->company}}</td>
-                                                    <td>{{$key->email}}</td>
-                                                    <td>{{$key->country}}</td>
-                                                    <td>{{$key->type}}</td>
-                                                    <td>{{$key->startdate}}</td>
-                                                    <td><a href="{{ route('user_edit',$key->id) }}" class="btn btn-outline-dark round mr-1 mb-1 waves-effect waves-light">Edit</a>
-                                                        <a href="{{ route('user_view',$key->id) }}" class="btn btn-outline-dark round mr-1 mb-1 waves-effect waves-light">Show</a>
+                                                    <td>{{$key->version}}</td>
+                                                    <td>{{$key->release_date}}</td>
+                                                    <td>{{$key->setup_file}}</td>
+                                                    <td>{{$key->user_manual}}</td>
+                                                    <td>{{$key->notes}}</td>
+                                                    <td><a href="{{ route('product_edit',$key->id) }}" class="btn btn-outline-dark round mr-1 mb-1 waves-effect waves-light">Edit</a>
+                                                        <a href="{{ route('product_view',$key->id) }}" class="btn btn-outline-dark round mr-1 mb-1 waves-effect waves-light">Show</a>
                                                     </td>
                                                 </tr>
                                                     @endforeach

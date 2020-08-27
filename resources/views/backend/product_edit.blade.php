@@ -53,7 +53,7 @@
                             <ul class="nav nav-tabs mb-3" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link d-flex align-items-center active" id="account-tab" data-toggle="tab" href="#account" aria-controls="account" role="tab" aria-selected="true">
-                                        <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Account</span>
+                                        <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Product</span>
                                     </a>
                                 </li>
                             </ul>
@@ -61,60 +61,52 @@
                                 <div class="tab-pane active" id="account" aria-labelledby="account-tab" role="tabpanel">
                                     <!-- users edit media object start -->
                                     <div class="media mb-2">
-                                        <a class="mr-2 my-25" href="#">
-                                            <img src="{{ asset('/storage/images/' . $users->photo) }}" alt="users avatar" class="users-avatar-shadow rounded" height="90" width="90">
-                                        </a>
-                                        <div class="media-body mt-50">
-                                            <h4 class="media-heading">{{ $users->name }}</h4>
-                                        </div>
+
                                     </div>
                                     <!-- users edit media object ends -->
                                     <!-- users edit account form start -->
-                                    <form  action="{{route('user_editpost',$users->id)}}" method="post" enctype="multipart/form-data">
+                                    <form  action="{{route('product_editpost',$product->id)}}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-12 col-sm-6">
                                                 <div class="form-group">
                                                    <div class="controls">
                                                         <label>Name</label>
-                                                        <input type="text" class="form-control" name="name" value="{{ $users->name }}">
+                                                        <input type="text" class="form-control" name="name" value="{{ $product->name }}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>E-mail</label>
-                                                        <input type="email" class="form-control" name="email" value="{{ $users->email }}">
+                                                        <label>Version</label>
+                                                        <input type="text" class="form-control" name="email" value="{{ $product->version }}">
                                                     </div>
                                                 </div>
                                                     <div class="form-group">
-                                                        <label>Company</label>
-                                                        <input type="text" class="form-control"  name="company" value="{{ $users->company }}">
+                                                        <label>Release Date</label>
+                                                        <input type="text" class="form-control"  name="company" value="{{ $product->release_date }}">
                                                     </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Creation Date</label>
-                                                        <input type="text" class="form-control" name="startdate" value="{{ $users->startdate }}">
+
+                                                <label>Setup File</label>
+                                                <div class="input-group mb-75">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
                                                     </div>
+                                                    <input type="file" name="setup_file" class="form-control"  value="{{ $product->setup_file }}">
+                                                </div>
+
+                                                <label>User Manual</label>
+                                                <div class="input-group mb-75">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
+                                                    </div>
+                                                    <input type="file" name="user_manual" class="form-control" value="{{ $product->user_manual }}">
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Country</label>
-                                                        <input type="text" class="form-control"  name="country" value="{{ $users->country }}">
+                                                        <label>Release Notes</label>
+                                                        <input type="text" class="form-control" name="release_notes" value="{{ $product->notes }}">
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Type</label>
-                                                        <input type="text" class="form-control"  name="type" value="{{ $users->type }}">
-                                                    </div>
-                                                </div>
-                                                <label>Upload a photo</label>
-                                                    <div class="input-group mb-75">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
-                                                        </div>
-                                                        <input type="file" name="avatar" class="form-control"  value="{{$users->photo}}" aria-describedby="basic-addon5">
-                                                    </div>
                                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
                                                     <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
                                                         Changes</button>

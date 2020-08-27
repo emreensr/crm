@@ -11,8 +11,13 @@ class Staff extends Model
 
 
     protected $fillable = [
-       'username', 'name', 'email', 'status', 'role', 'company', 'age', 'mobile',
-        'position', 'office', 'startdate', 'website', 'gender', 'address', 'city', 'state', 'country', 'twitter','facebook','instagram',
-        'photo'
+       'username', 'name', 'email', 'type' ,'company', 'startdate', 'country',
+        'photo',
     ];
+
+    public function product()
+    {
+        return $this->belongsToMany(Product::class, 'user_product');
+    }
+
 }

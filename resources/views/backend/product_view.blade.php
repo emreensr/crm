@@ -54,49 +54,44 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <div class="card-title">Account</div>
+                                <div class="card-title">Product</div>
                             </div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="users-view-image">
-                                        <img src="{{ asset('/storage/images/' . $users->photo) }}"  class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1" alt="avatar">
-                                    </div>
                                     <div class="col-12 col-sm-9 col-md-6 col-lg-5">
                                         <table>
                                             <tr>
                                                 <td class="font-weight-bold">Name</td>
-                                                <td>{{$users->name}}</td>
+                                                <td>{{$product->name}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="font-weight-bold">Email</td>
-                                                <td>{{$users->email}}</td>
+                                                <td class="font-weight-bold">Version</td>
+                                                <td>{{$product->version}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="font-weight-bold">Type</td>
-                                                <td>{{$users->type}}</td>
+                                                <td class="font-weight-bold">Release Date</td>
+                                                <td>{{$product->release_date}}</td>
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="col-12 col-md-12 col-lg-5">
                                         <table class="ml-0 ml-sm-0 ml-lg-0">
                                             <tr>
-                                                <td class="font-weight-bold">Creation Date</td>
-                                                <td>{{$users->startdate}}</td>
+                                                <td class="font-weight-bold">Setup File</td>
+                                                <td>{{$product->setup_file}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="font-weight-bold">Company</td>
-                                                <td>{{$users->company}}</td>
+                                                <td class="font-weight-bold">User Manual</td>
+                                                <td>{{$product->user_manual}}</td>
                                             </tr>
                                             <tr>
-                                                <td class="font-weight-bold">Products</td>
-                                                <td>{{$users->role}}</td>
+                                                <td class="font-weight-bold">Release Notes</td>
+                                                <td>{{$product->notes}}</td>
                                             </tr>
-
                                         </table>
                                     </div>
                                     <div class="col-12">
-                                        <a href="{{route('user_edit', $users->id)}}" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
-                                        <a href="{{route('user_delete',$users->id)}}"><button class="btn btn-outline-danger"><i class="feather icon-trash-2"></i> Delete</button></a>
+                                        <a href="{{route('product_edit', $product->id)}}" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
+                                        <a href="{{route('product_delete',$product->id)}}"><button class="btn btn-outline-danger"><i class="feather icon-trash-2"></i> Delete</button></a>
                                     </div>
                                 </div>
                             </div>

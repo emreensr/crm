@@ -64,12 +64,6 @@
                                             <div class="col-12 col-sm-6">
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Username</label>
-                                                        <input type="text" class="form-control" name="username" placeholder="Username" required data-validation-required-message="This username field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
                                                         <label>Name</label>
                                                         <input type="text" class="form-control" name="name" placeholder="Name"  required data-validation-required-message="This name field is required">
                                                     </div>
@@ -81,141 +75,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Birth date</label>
-                                                        <input type="text" class="form-control" name="birthdate" placeholder="Birth date" data-validation-required-message="This birthdate field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Mobile</label>
-                                                        <input type="text" class="form-control" name="mobile"  placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
-                                                    </div>
-                                                </div>
-                                                <ul class="nav nav-tabs mb-3" role="tablist">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
-                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Company</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="form-group">
                                                     <label>Company</label>
                                                     <input type="text" class="form-control"  name="company" placeholder="Company name">
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="controls">
-                                                        <label>Office</label>
-                                                        <input type="text" class="form-control" name="office" placeholder="Mobile number here..." data-validation-required-message="This mobile number is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Position</label>
-                                                        <input type="text" class="form-control" name="position"  placeholder="Position here..." data-validation-required-message="This mobile number is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Website</label>
-                                                        <input type="text" class="form-control" name="website" required placeholder="Website here..."  data-validation-required-message="This Website field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Start Date</label>
-                                                        <input type="text" class="form-control" name="startdate" required placeholder="Website here..."  data-validation-required-message="This Website field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Gender</label>
-                                                    <ul class="list-unstyled mb-0">
-                                                        <li class="d-inline-block mr-2">
-                                                            <fieldset>
-                                                                <div class="vs-radio-con">
-                                                                    <input type="radio" name="gender" checked value="false">
-                                                                    <span class="vs-radio">
-                                                                            <span class="vs-radio--border"></span>
-                                                                            <span class="vs-radio--circle"></span>
-                                                                        </span>
-                                                                    Male
-                                                                </div>
-                                                            </fieldset>
-                                                        </li>
-                                                        <li class="d-inline-block mr-2">
-                                                            <fieldset>
-                                                                <div class="vs-radio-con">
-                                                                    <input type="radio" name="gender" value="false">
-                                                                    <span class="vs-radio">
-                                                                            <span class="vs-radio--border"></span>
-                                                                            <span class="vs-radio--circle"></span>
-                                                                        </span>
-                                                                    Female
-                                                                </div>
-                                                            </fieldset>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <label>Upload a photo</label>
-                                                <div class="input-group mb-75">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
-                                                    </div>
-                                                    <input type="file" name="avatar" class="form-control"  placeholder="Upload a photo" aria-describedby="basic-addon5">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-
-                                                <div class="form-group">
-                                                    <label>Status</label>
-                                                    <select class="form-control" name="status" data-value="0">
-                                                        <option>0</option>
-                                                        <option>1</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Role</label>
-                                                    <select class="form-control" name="role" data-value="0">
-                                                        <option>0</option>
-                                                        <option>1</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Age</label>
-                                                        <input type="text" class="form-control" name="age"  placeholder="Age here..." data-validation-required-message="This mobile number is required">
-                                                    </div>
-                                                </div>
-
-                                                <ul class="nav nav-tabs mb-3" role="tablist">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
-                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Addresses</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Address Line 1</label>
-                                                        <input type="text" class="form-control" name="address"  required placeholder="Address Line 1" data-validation-required-message="This Address field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>State</label>
-                                                        <input type="text" class="form-control" name="state" required placeholder="State"  data-validation-required-message="This Time Zone field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>City</label>
-                                                        <input type="text" class="form-control" name="city" required placeholder="City" data-validation-required-message="This Time Zone field is required">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="controls">
-                                                        <label>Postcode</label>
-                                                        <input type="text" class="form-control"  name="postcode" required placeholder="Postcode"  data-validation-required-message="This Postcode field is required">
+                                                        <label>Creation Date</label>
+                                                        <input type="text" class="form-control" name="startdate" required placeholder="Creation date here..."  data-validation-required-message="This Website field is required">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -224,43 +90,26 @@
                                                         <input type="text" class="form-control"  name="country" required placeholder="Country" data-validation-required-message="This Time Zone field is required">
                                                     </div>
                                                 </div>
-                                                <ul class="nav nav-tabs mb-3" role="tablist">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link d-flex align-items-center active"  aria-selected="true">
-                                                            <i class="feather icon-user mr-25"></i><span class="d-none d-sm-block">Social Links</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <fieldset>
-                                                    <label>Twitter</label>
-                                                    <div class="input-group mb-75">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text feather icon-twitter" id="basic-addon3"></span>
-                                                        </div>
-                                                        <input type="text" name="twitter" class="form-control" placeholder="https://www.twitter.com/" aria-describedby="basic-addon3">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <label>Type</label>
+                                                        <input type="text" class="form-control"  name="type" required placeholder="Type" data-validation-required-message="This Time Zone field is required">
                                                     </div>
-
-                                                    <label>Facebook</label>
-                                                    <div class="input-group mb-75">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text feather icon-facebook" id="basic-addon4"></span>
-                                                        </div>
-                                                        <input type="text" name="facebook" class="form-control" placeholder="https://www.facebook.com/" aria-describedby="basic-addon4">
+                                                </div>
+                                                <label>Upload a photo</label>
+                                                <div class="input-group mb-75">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text feather icon-upload" id="basic-addon5"></span>
                                                     </div>
-                                                    <label>Instagram</label>
-                                                    <div class="input-group mb-75">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text feather icon-instagram" id="basic-addon5"></span>
-                                                        </div>
-                                                        <input type="text" name="instagram" class="form-control"  placeholder="https://www.instagram.com/" aria-describedby="basic-addon5">
-                                                    </div>
-                                                </fieldset>
-                                            <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                                <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
-                                                    Changes</button>
-                                                <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                                    <input type="file" name="avatar" class="form-control"  placeholder="Upload a photo" aria-describedby="basic-addon5">
+                                                </div>
+                                                <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
+                                                    <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
+                                                        Changes</button>
+                                                    <button type="reset" class="btn btn-outline-warning">Reset</button>
+                                                </div>
                                             </div>
-                                        </div>
+                                            </div>
                                     </form>
                                     <!-- users edit account form ends -->
                                 </div>
